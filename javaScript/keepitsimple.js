@@ -5,16 +5,38 @@
 
 //Funciones
 var agregarTarea = function(){
-    alert("Evento click en el botón de Agregar tarea");
+    var tarea = tareaInput.value,
+    nuevaTarea = document.createElement("li"),
+    enlace = document.createElement("a"),
+    contenido = document.createTextNode(tarea);
+
+    if(tarea ===""){
+        tareaInput.setAttribute("placeholder", "Agregue una nueva tarea");
+        tareaInput.className = "error";
+        return false;
+
+    }
 };
+
 var comprobarImput = function(){
-    alert("Evento click en el input de texto");
+};
+
+var eliminarTarea = function(){
 };
 
 //Eventos
+
+//Agregar Tarea
 btnNuevaTarea.addEventListener("click", agregarTarea);
+
+//Comprobar Input
 tareaInput.addEventListener("click", comprobarImput);
 
+//Borrando Elemehntos de la lista
+for (var i = 0; i <= lista.children.length -1; i++) {
+    lista.children[i].addEventListener("click", eliminarTarea);
+    
+}
     
 }());
 
