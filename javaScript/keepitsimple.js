@@ -1,33 +1,20 @@
 (function(){
-    let list = document.getElementById("list"),
-        newTask = document.getElementById("newTask"),
-        btnSubmit = document.getElementsByClassName("btnSubmit");
+    var lista = document.getElementById("lista"),
+        tareaInput = document.getElementById("tareaInput"),
+        btnNuevaTarea = document.getElementById("btn-agregar");
 
-        //funciones
-    let addTask = function(){
-        console.log("addTask")
-    };
+//Funciones
+var agregarTarea = function(){
+    alert("Evento click en el botón de Agregar tarea");
+};
+var comprobarImput = function(){
+    alert("Evento click en el input de texto");
+};
+
+//Eventos
+btnNuevaTarea.addEventListener("click", agregarTarea);
+tareaInput.addEventListener("click", comprobarImput);
+
     
-    let cheackInput = function(){
-        console.log("cheackInput")
-    };
-    
-    let delateTask = function(){
-        console.log("deleteTask")
-    };
-
-    //eventos
-    
-    //agregar tarea
-    btnSubmit.addEventListener("click", addTask,);
-
-    //Comprobar Input
-    newTask.addEventListener("click", cheackInput());
-
-    //Borrando elementos de la lista
-    for (let i = 0; i <= listjs.children.length -1; i++) {
-        list.children[i].addEventListener("click", delateTask);
-    }
-
 }());
 
