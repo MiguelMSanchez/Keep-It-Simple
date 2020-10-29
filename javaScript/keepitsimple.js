@@ -16,10 +16,15 @@
         return false;
 
     }
-
+    //Agregamos el contenido al enlace
     enlace.appendChild(contenido);
+    //Le establecemos un atributo href
+    enlace.setAttribute("href", "#");
+    // Agregamos el enlace a la nueva tarea (li)
+    nuevaTarea.appendChild(enlace);
+    // Agregamos la nueva tarea a la lista
+    lista.appendChild(nuevaTarea);
 };
-
 
 var comprobarImput = function(){
 };
