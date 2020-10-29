@@ -4,11 +4,11 @@
         btnNuevaTarea = document.getElementById("btn-agregar");
 
 //Funciones
-var agregarTarea = function(){
+    var agregarTarea = function(){
     var tarea = tareaInput.value,
-    nuevaTarea = document.createElement("li"),
-    enlace = document.createElement("a"),
-    contenido = document.createTextNode(tarea);
+        nuevaTarea = document.createElement("li"),
+        enlace = document.createElement("a"),
+        contenido = document.createTextNode(tarea);
 
     if(tarea ===""){
         tareaInput.setAttribute("placeholder", "Agregue una nueva tarea");
@@ -16,7 +16,10 @@ var agregarTarea = function(){
         return false;
 
     }
+
+    enlace.appendChild(contenido);
 };
+
 
 var comprobarImput = function(){
 };
